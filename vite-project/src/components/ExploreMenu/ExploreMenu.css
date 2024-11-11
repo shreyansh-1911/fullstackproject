@@ -1,0 +1,32 @@
+.explore-menu-container {
+    padding: 20px;
+  }
+  
+  .menu-items {
+    padding-bottom: 10px; /* Space below items */
+  }
+  
+  .menu-item {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+    width: 120px; /* Reduced width for a smaller image size */
+  }
+  
+  .menu-image {
+    width: 80%; /* Reduced size of the image inside the container */
+    border-radius: 8px; /* Optional styling for rounded corners */
+  }
+  
+  .menu-items::-webkit-scrollbar {
+    display: none; /* Hide horizontal scrollbar */
+  }
+  
+  .menu-items {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .active {
+    border: 4px solid tomato;
+    border-radius: 50%; /* Makes the border round */
+  }
+  

@@ -1,0 +1,12 @@
+.header {
+    margin: 34px auto;
+    background: url('/header_img.png') no-repeat left center;
+    background-size: cover; /* Adjusts the image to cover the full area */
+    height: 34vw;
+    color: white; /* Sets text color for visibility on the background */
+  }
+  
+  .content {
+    max-width: 50%; /* Limits the width of the content */
+  }
+  
