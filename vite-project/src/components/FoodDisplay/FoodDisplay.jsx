@@ -1,6 +1,6 @@
 import React from 'react';
 import { food_list } from '../../assets/assets';
-import FoodItem from '../FoodItem/FoodItem' // Assuming FoodItem is another component you created for food display
+import FoodItem from '../FoodItem/FoodItem'
 import './FoodDisplay.css';
 
 

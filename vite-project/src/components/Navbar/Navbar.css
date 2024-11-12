@@ -1,17 +1,26 @@
-button{
+/* General button styles */
+button {
     background-color: transparent;
     padding: 10px 20px;
     border-radius: 50px;
 }
-li{
+
+/* Styles for list items */
+li {
     list-style: none;
     cursor: pointer;
+    padding: 10px; /* Add padding for easier clicking */
 }
+
+/* Navbar links list styles */
 .navbar-links {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.active{
+
+/* Active class styling */
+.navbar-links li.activ {
     border-bottom: 2px solid grey;
+    padding-bottom: 3px; /* Adjust padding to avoid shifting */
 }
