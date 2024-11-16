@@ -1,38 +1,30 @@
 import React, { useState, useContext } from 'react';
-import { CartContext } from '../../Pages/Cart/cartContext';
+import { CartContext } from '../../context/CartContext';
 import { assets } from '../../assets/assets';
 import './FoodItem.css';
+import { StoreContext } from '../../context/StoreContext';
 
 const FoodItem = ({ id, name, description, price, image }) => {
-    const [itemCount, setItemCount] = useState(0);
-    const { addToCart, removeFromCart } = useContext(CartContext);
-
-    const handleAdd = () => {
-        setItemCount(prev => prev + 1);
-        addToCart({ id, name, price });
-    };
-
-    const handleRemove = () => {
-        setItemCount(prev => prev - 1);
-        removeFromCart(id);
-    };
+    
+    // const [itemCount, setItemCount] = useState(0);
+    const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
 
     return (
         <div className="card">
             <div className="image-container">
                 <img src={image} alt={name} className="card-img-top" />
-                {!itemCount ? (
+                {!cartItems[id] ? (
                     <img
                         className="add"
-                        onClick={handleAdd}
+                        onClick={()=> addToCart(id)}
                         src={assets.add_icon_white}
                         alt="Add"
                     />
                 ) : (
                     <div className="food-item-counter">
-                        <img onClick={handleRemove} src={assets.remove_icon_red} alt="Remove" />
-                        <p className='mb-0'>{itemCount}</p>
-                        <img onClick={handleAdd} src={assets.add_icon_green} alt="Add" />
+                        <img onClick={()=> removeFromCart(id)} src={assets.remove_icon_red} alt="Remove" />
+                        <p className='mb-0'>{cartItems[id]}</p>
+                        <img onClick={()=> addToCart(id)} src={assets.add_icon_green} alt="Add" />
                     </div>
                 )}
             </div>

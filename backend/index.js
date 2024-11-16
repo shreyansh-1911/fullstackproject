@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken'); // Import jwt for token generation
 const User = require('./models/User'); // Ensure this points to your User model
+const { default: foodRouter } = require('./routes/foodRoute');
 
 const app = express();
 const PORT =8000;
@@ -11,6 +12,11 @@ const PORT =8000;
 // Middleware
 app.use(cors());
 app.use(express.json());  // Enable parsing of JSON request bodies
+
+//api endpoints
+app.use("/api/food", foodRouter);
+app.use("/images",express.static('uploads'))
+app.use('/api/cart', cartRoutes);
 
 // MongoDB connection
 mongoose.connect('mongodb://localhost:27017/food-delivery', {
