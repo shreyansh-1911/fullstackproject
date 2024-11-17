@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react';
-import { CartContext } from '../../context/CartContext';
 import { assets } from '../../assets/assets';
 import './FoodItem.css';
 import { StoreContext } from '../../context/StoreContext';
@@ -7,12 +6,12 @@ import { StoreContext } from '../../context/StoreContext';
 const FoodItem = ({ id, name, description, price, image }) => {
     
     // const [itemCount, setItemCount] = useState(0);
-    const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
+    const { cartItems, addToCart, removeFromCart, url } = useContext(StoreContext);
 
     return (
         <div className="card">
             <div className="image-container">
-                <img src={image} alt={name} className="card-img-top" />
+                <img src={url+"/images/"+image} alt={name} className="card-img-top" />
                 {!cartItems[id] ? (
                     <img
                         className="add"

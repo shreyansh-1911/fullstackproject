@@ -1,27 +1,36 @@
-import React from 'react'
-import { assets } from '../../assets/assets'
-import {NavLink} from 'react-router-dom'
+import React from 'react';
+import { assets } from '../../assets/assets';
+import { NavLink } from 'react-router-dom';
+import './Sidebar.css';
 
 const Sidebar = () => {
   return (
-    <div className='sidebar'>
-        <div className="sidebar-options">
-            <NavLink to='/add' className="sidebar-option">
-                <img src={assets.add_icon} alt="" />
-                <p>Add Items</p>
-            </NavLink>
-            <NavLink to='/list' className="sidebar-option">
-                <img src={assets.order_icon} alt="" />
-                <p>List Items</p>
-            </NavLink>
-            <NavLink to='/orders' className="sidebar-option">
-                <img src={assets.order_icon} alt="" />
-                <p>Orders</p>
-            </NavLink>
-        </div>
-      
+    <div className="bg-light vh-100 d-flex flex-column align-items-center p-3 shadow-sm">
+      <div className="sidebar-options w-100">
+        <NavLink
+          to="/add"
+          className="d-flex align-items-center mb-3 text-decoration-none text-dark"
+        >
+          <img src={assets.add_icon} alt="Add Icon" className="icon-size" />
+          <p className="mb-0 d-none d-md-inline ms-2">Add Items</p>
+        </NavLink>
+        <NavLink
+          to="/list"
+          className="d-flex align-items-center mb-3 text-decoration-none text-dark"
+        >
+          <img src={assets.order_icon} alt="List Icon" className="icon-size" />
+          <p className="mb-0 d-none d-md-inline ms-2">List Items</p>
+        </NavLink>
+        <NavLink
+          to="/orders"
+          className="d-flex align-items-center text-decoration-none text-dark"
+        >
+          <img src={assets.order_icon} alt="Orders Icon" className="icon-size" />
+          <p className="mb-0 d-none d-md-inline ms-2">Orders</p>
+        </NavLink>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

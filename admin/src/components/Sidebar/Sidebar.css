@@ -1,4 +1,25 @@
-.sidebar-option.active{
-    background-color: #fff0ed;
-    border-color:tomato ;
-}
+.sidebar-container {
+    width: 200px; /* Fixed width for the sidebar */
+    min-width: 100px; /* Ensures a consistent layout */
+  }
+  
+  .form-container {
+    padding: 20px; /* Add some spacing around the form */
+  }
+  
+  .icon-size {
+    width: 40px; /* Consistent icon size */
+    height: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar-container {
+      width: 80px; /* Slightly smaller width for the sidebar on mobile */
+    }
+  
+    .icon-size {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  

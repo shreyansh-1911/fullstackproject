@@ -4,7 +4,7 @@ import './ExploreMenu.css';
 
 const ExploreMenu = ({ category, setCategory }) => {
     return (
-        <div className="explore-menu-container">
+        <div className="explore-menu-container" id='explore-menu'>
             <h2 className="text-start">Explore Our Menu</h2>
             <p className="text-start">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, nihil aperiam? Numquam quis ut qui recusandae
