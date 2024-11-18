@@ -1,5 +1,7 @@
 .explore-menu-container {
     padding: 20px;
+    margin: auto;
+    width: 80%;
   }
   
   .menu-items {

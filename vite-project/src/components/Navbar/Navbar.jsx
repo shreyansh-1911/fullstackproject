@@ -14,7 +14,7 @@ const Navbar = () => {
         window.location.href = '/login'; // Redirect to login page
     };
     return (
-        <div>
+        <div className="m-auto" style={{width:"90%"}}>
             <nav className="navbar bg-body-tertiary">
                 <div className="container-fluid">
                     <Link  to='/' className="navbar-brand"><img src={assets.logo} alt="" /></Link>

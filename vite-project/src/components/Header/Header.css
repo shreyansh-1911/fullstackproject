@@ -4,6 +4,8 @@
     background-size: cover; /* Adjusts the image to cover the full area */
     height: 34vw;
     color: white; /* Sets text color for visibility on the background */
+    width: 80%;
+    margin: auto;
   }
   
   .content {

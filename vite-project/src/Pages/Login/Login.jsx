@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom'; // Import Link for navigation
+import { StoreContext } from '../../context/StoreContext';
 
 const Login = () => {
+    const { cartItems, food_list, removeFromCart, getTotalCartAmount, url } = useContext(StoreContext);
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -22,6 +25,7 @@ const Login = () => {
 
             if (response.ok) {
                 const data = await response.json();
+                setToken(response.data.token);
                 localStorage.setItem('token', data.token); // Store the JWT token
                 localStorage.setItem('auth', 'true'); // Set auth flag to true
                 navigate('/'); // Redirect to Dashboard after successful login

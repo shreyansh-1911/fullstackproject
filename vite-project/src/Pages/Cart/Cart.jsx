@@ -2,12 +2,15 @@ import { useContext } from 'react';
 import { StoreContext } from '../../context/StoreContext';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from "../../components/Navbar/Navbar"
 
 const Cart = () => {
     const { cartItems, food_list, removeFromCart, getTotalCartAmount, url } = useContext(StoreContext);
     const navigate = useNavigate();
 
     return (
+        <>
+        <Navbar/>
         <div className="cart container py-4">
             <h2 className="text-center mb-4">Your Cart</h2>
             <div className="row">
@@ -95,6 +98,7 @@ const Cart = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

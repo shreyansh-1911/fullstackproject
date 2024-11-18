@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken'; // Import jwt for token generation
 import User from './models/User.js'; // Ensure this points to your User model, include `.js` in ES Modules
 import foodRouter from './routes/foodRoute.js'; // Include `.js` in import paths
 import authRouter from './routes/authRoute.js';
-// import cartRouter from './routes/cartRoute.js';
+import cartRouter from './routes/cartRoute.js';
 
 const app = express();
 const PORT = 8000;
@@ -19,7 +19,7 @@ app.use(express.json()); // Enable parsing of JSON request bodies
 app.use("/api/food", foodRouter);
 app.use("/images", express.static('uploads'));
 app.use("/api/auth",authRouter);
-// app.use("/api/cart",cartRouter);
+app.use("/api/cart",cartRouter);
 
 // MongoDB connection
 mongoose.connect('mongodb://localhost:27017/food-delivery', {
