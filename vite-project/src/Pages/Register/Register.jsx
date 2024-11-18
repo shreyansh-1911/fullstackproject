@@ -34,42 +34,47 @@ const Register = () => {
     };
 
     return (
-        <div className="container mt-5">
-            <h2 className="text-center">Register</h2>
-            {errorMessage && <div className="alert alert-danger text-center">{errorMessage}</div>} {/* Display error message */}
-            <form onSubmit={handleRegister} className="w-50 mx-auto">
-                <div className="mb-3">
-                    <label>Username</label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        value={username}
-                        onChange={(e) => setUserName(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className="mb-3">
-                    <label>Email</label>
-                    <input
-                        type="email"
-                        className="form-control"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className="mb-3">
-                    <label>Password</label>
-                    <input
-                        type="password"
-                        className="form-control"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <button type="submit" className="btn btn-primary w-100">Register</button>
-            </form>
+        <div className="container d-flex align-items-center justify-content-center" style={{ minHeight: '100vh' }}>
+            <div className="card shadow-lg p-4" style={{ width: '100%', maxWidth: '400px' }}>
+                <h2 className="text-center mb-4">Register</h2>
+                {errorMessage && <div className="alert alert-danger text-center">{errorMessage}</div>} {/* Display error message */}
+                <form onSubmit={handleRegister}>
+                    <div className="mb-3">
+                        <label htmlFor="username" className="form-label">Username</label>
+                        <input
+                            type="text"
+                            id="username"
+                            className="form-control"
+                            value={username}
+                            onChange={(e) => setUserName(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="email" className="form-label">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            className="form-control"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="password" className="form-label">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            className="form-control"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="btn btn-primary w-100">Register</button>
+                </form>
+            </div>
         </div>
     );
 };

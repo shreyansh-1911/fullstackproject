@@ -21,13 +21,6 @@ const Sidebar = () => {
           <img src={assets.order_icon} alt="List Icon" className="icon-size" />
           <p className="mb-0 d-none d-md-inline ms-2">List Items</p>
         </NavLink>
-        <NavLink
-          to="/orders"
-          className="d-flex align-items-center text-decoration-none text-dark"
-        >
-          <img src={assets.order_icon} alt="Orders Icon" className="icon-size" />
-          <p className="mb-0 d-none d-md-inline ms-2">Orders</p>
-        </NavLink>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const AppDownLoad = () => {
     <div className="app-download text-center py-5" id="app-download">
       <div className="container">
         <h2 className="mb-4">For a Better Experience</h2>
-        <p className="fs-5">Download the <strong>Tomato App</strong> now!</p>
+        <p className="fs-5">Download the <strong>Crave Courier App</strong> now!</p>
         <div className="app-download-platforms d-flex justify-content-center gap-4 mt-4">
           <a href="#" target="_blank" rel="noopener noreferrer">
             <img

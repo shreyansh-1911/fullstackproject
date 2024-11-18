@@ -11,8 +11,7 @@ const Footer = () => {
           <div className="col-md-4">
             <img src={assets.logo} alt="Logo" className="mb-3" style={{ maxWidth: '150px' }} />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dicta aspernatur voluptatem,
-              rerum aliquam voluptates autem quae ut sed tempora.
+            Enjoy your meal, we'll take care of the rest!
             </p>
             <div className="d-flex gap-3 mt-3">
               <img src={assets.facebook_icon} alt="Facebook" className="social-icon" style={{ width: '30px' }} />
@@ -37,12 +36,12 @@ const Footer = () => {
             <h5 className="text-uppercase mb-3">Get in Touch</h5>
             <ul className="list-unstyled">
               <li>+91-9024122811</li>
-              <li>contact@tomato.com</li>
+              <li>contact@cravecourier.com</li>
             </ul>
           </div>
         </div>
         <hr className="border-light" />
-        <p className="text-center mb-0">Copyright © 2024 Tomato.com - All Rights Reserved.</p>
+        <p className="text-center mb-0">Copyright © 2024 Cravecourier.com - All Rights Reserved.</p>
       </div>
     </footer>
   );

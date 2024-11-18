@@ -32,7 +32,6 @@ const FoodItem = ({ id, name, description, price, image }) => {
                 <p className="card-text">{description}</p>
                 <div className="d-flex justify-content-between align-items-center">
                     <p className="card-price mb-0">${price}</p>
-                    <img className="stars" src={assets.rating_starts} alt="Rating" />
                 </div>
             </div>
         </div>

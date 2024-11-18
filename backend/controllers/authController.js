@@ -2,7 +2,7 @@ import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken"
 
-const login = async(req,res)=>{
+const login = async (req, res) => {
     const { email, password } = req.body;
 
     try {
@@ -16,13 +16,20 @@ const login = async(req,res)=>{
             return res.status(400).json({ message: 'Invalid password' });
         }
 
-        const token = jwt.sign({ userId: user._id }, 'your_jwt_secret', { expiresIn: '1h' });
-        res.json({ token });
+        const token = jwt.sign(
+            { userId: user._id, role: user.role },'your_jwt_secret',{ expiresIn: '1h' }
+        );
+
+        res.json({
+            token,
+            role: user.role,
+            message: `Logged in as ${user.role}`,
+        });
     } catch (err) {
         console.error('Error during login:', err);
         res.status(500).json({ message: 'Server error' });
     }
-}
+};
 
 const register = async(req,res)=>{
     const { username, email, password } = req.body;

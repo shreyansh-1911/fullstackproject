@@ -17,18 +17,16 @@ const Navbar = () => {
         <div className="m-auto" style={{width:"90%"}}>
             <nav className="navbar bg-body-tertiary">
                 <div className="container-fluid">
-                    <Link  to='/' className="navbar-brand"><img src={assets.logo} alt="" /></Link>
+                    <Link  to='/' className="navbar-brand"><img src={assets.logo} alt="" style={{width:"120px", height:"40px"}} /></Link>
                     <ul className='d-flex gap-4 navbar-links'>
-                        <Link to='/' onClick={() => setMenu("menu")} className={menu === 'menu' ? "activ" : ""} >Menu</Link>
-                        <a href='#explore-menu' onClick={() => setMenu("home")} className={menu === 'home' ? "activ" : ""} >Home</a>
-                        <a href='#app-download' onClick={() => setMenu("mobile-app")} className={menu === 'mobile-app' ? "activ" : ""} >Mobile App</a>
-                        <a href='#footer' onClick={() => setMenu("contact-us")} className={menu === 'contact-us' ? "activ" : ""} >Contact Us</a>
+                        <Link to='/' onClick={() => setMenu("menu")}  >Menu</Link>
+                        <a href='#explore-menu' onClick={() => setMenu("home")}  >Home</a>
+                        <a href='#app-download' onClick={() => setMenu("mobile-app")}  >Mobile App</a>
+                        <a href='#footer' onClick={() => setMenu("contact-us")}  >Contact Us</a>
                     </ul>
                     <div className='d-flex gap-3 align-items-center'>
 
                         <Link to="/cart"><img src={assets.basket_icon} alt="Basket Icon" /></Link>
-                        <div className={getTotalCartAmount()===0?"":"dot"}></div>
-                        <div><img src={assets.search_icon} alt="Search Icon" /></div>
                         <div>
                             <button className="btn btn-primary" onClick={handleLogout}>
                                 Logout

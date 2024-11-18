@@ -20,7 +20,4 @@ li {
 }
 
 /* Active class styling */
-.navbar-links li.activ {
-    border-bottom: 2px solid grey;
-    padding-bottom: 3px; /* Adjust padding to avoid shifting */
-}
+
