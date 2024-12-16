@@ -31,7 +31,7 @@ const Cart = () => {
                                     <div key={index} className="row text-center align-items-center mb-3">
                                         <div className="col-2">
                                             <img
-                                                src={url+"/images/"+item.image}
+                                                src={url+"/images/"+item.image} // multer
                                                 alt={item.name}
                                                 className="img-fluid rounded"
                                                 style={{ maxWidth: '60px', height: 'auto' }}

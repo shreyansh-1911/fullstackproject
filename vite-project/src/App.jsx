@@ -2,9 +2,11 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Cart from './Pages/Cart/Cart';
-import PlaceOrder from './Pages/PlaceOrder/placeOrder';
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
+import Verify from './Pages/Verify/Verify';
+import MyOrders from './Pages/MyOrders/MyOrders';
+import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Route exact path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/order" element={<PlaceOrder />} />
+        <Route path="/verify" element={<Verify />} />
+        <Route path="/myorders" element={<MyOrders />} />
       </Routes>
     </div>
     </>

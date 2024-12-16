@@ -28,7 +28,7 @@ const Login = () => {
 
                 // Redirect based on role
                 if (data.role === 'admin') {
-                    window.location.href = 'http://localhost:5174';
+                    window.location.href = 'http://localhost:5173';
                 } else if (data.role === 'user') {
                     navigate('/'); // Redirect to user page
                 }
